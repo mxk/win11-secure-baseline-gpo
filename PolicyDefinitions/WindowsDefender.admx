@@ -185,6 +185,16 @@
                 <text id="SupportLogLocation" valueName="SupportLogLocation" required="true" />
             </elements>
         </policy>
+        <policy name="HideExclusionsFromLocalAdmins" class="Machine" displayName="$(string.HideExclusionsFromLocalAdmins)" explainText="$(string.HideExclusionsFromLocalAdmins_Explain)" key="Software\Policies\Microsoft\Windows Defender" valueName="HideExclusionsFromLocalAdmins">
+            <parentCategory ref="AntiSpywareDefender" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+             <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
         <policy name="Root_PUAProtection" class="Machine" displayName="$(string.Root_PUAProtection)" explainText="$(string.Root_PUAProtection_Explain)" key="Software\Policies\Microsoft\Windows Defender" valueName="PUAProtection" presentation="$(presentation.Root_PUAProtection)">
             <parentCategory ref="AntiSpywareDefender" />
             <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />

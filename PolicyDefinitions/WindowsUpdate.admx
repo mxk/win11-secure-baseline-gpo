@@ -83,6 +83,13 @@
         </or>
       </definition>
 
+      <!--At least Windows Server 2019, or Windows 10 Version 1809-->
+      <definition name="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809" displayName="$(string.WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
+        </or>
+      </definition>
+
       <!--At least Windows Server 2022, or Windows 10 Version 2004​-->
       <definition name="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004" displayName="$(string.WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004)">
         <or>
@@ -2345,7 +2352,7 @@
         presentation="$(presentation.UpdateNotificationLevel_Title)"
         valueName="SetUpdateNotificationLevel">
       <parentCategory ref="WindowsUpdateExperience" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <supportedOn ref="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>

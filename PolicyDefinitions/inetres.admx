@@ -2760,6 +2760,16 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="DisableFlashInIE" class="Both" displayName="$(string.DisableFlashInIE)" explainText="$(string.IE_ExplainDisableFlashInIE)" key="Software\Policies\Microsoft\Internet Explorer" valueName="DisableFlashInIE">
+      <parentCategory ref="IESF_AddOnManagement" />
+      <supportedOn ref="SUPPORTED_IE10WIN8" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="General_Zooming" class="Both" displayName="$(string.General_Zooming)" explainText="$(string.IE_ExplainGeneral_Zooming)" key="Software\Policies\Microsoft\Internet Explorer\ZOOM" valueName="ZoomDisabled">
       <parentCategory ref="InternetExplorer" />
       <supportedOn ref="SUPPORTED_IE7" />

@@ -19,6 +19,7 @@
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3
 Option 7 only supported on servers of at least Windows Server 2016 edition​</string>
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 through Windows Server 2022, or Windows 10​</string>
+      <string id="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809">At least Windows Server 2019, or Windows 10 Version 1809​</string>
       <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">At least Windows Server 2022, or Windows 10 Version 2004​</string>
       <string id="AUDontShowUasHelp">This policy setting allows you to manage whether the 'Install Updates and Shut Down' option is displayed in the Shut Down Windows dialog box.
 
