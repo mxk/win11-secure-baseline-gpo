@@ -1,18 +1,14 @@
-Windows 11 Secure Baseline GPO
-==============================
+# Windows 11 Secure Baseline GPO
 
-A secure baseline group policy based on [win10-secure-baseline-gpo][win10].
-Currently, it does not include Server-specific settings.
+A secure baseline group policy based on [win10-secure-baseline-gpo][win10]. It does not currently include Server-specific settings. All settings are maintained in a single PolicyRules file that can be applied via LGPO.exe.
 
 [win10]: https://github.com/mxk/win10-secure-baseline-gpo
 
-Installation
-------------
+## Installation
 
-*TODO*
+Run `install.cmd` as an Administrator and restart the computer.
 
-Required ADMX templates
------------------------
+## Required ADMX templates
 
 `PolicyDefinitions` directory contains templates from the following sources:
 
@@ -26,9 +22,7 @@ Required ADMX templates
 [RTLFB]: https://docs.microsoft.com/en-us/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services
 [Edge]: https://www.microsoft.com/en-us/edge/business/download
 
-When an update is released, the entire `PolicyDefinitions` directory should be
-rebuilt by copying templates over in the listed order. Copying updated ADMX/ADML
-files without removing old ones first may cause problems.
+When an update is released, the entire `PolicyDefinitions` directory should be rebuilt by copying templates over in the listed order. Copying updated ADMX/ADML files without removing old ones first may cause problems.
 
 To extract `PolicyDefinitions` from a Windows ISO:
 
@@ -36,3 +30,11 @@ To extract `PolicyDefinitions` from a Windows ISO:
 2. Open `sources\install.wim` with 7-Zip.
 3. Check `[1].xml` for the appropriate version (though they should all be the same).
 4. Extract `\<N>\Windows\PolicyDefinitions`.
+
+## Current policy
+
+The current local policy can be obtained with the following command in a Command Prompt running as an Administrator:
+
+```
+rmdir /s /q LGPO & mkdir LGPO & LGPO.exe /b %cd%\LGPO & GPO2PolicyRules.exe .\LGPO LGPO.PolicyRules
+```
